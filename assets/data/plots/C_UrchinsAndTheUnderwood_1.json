@@ -1,0 +1,108 @@
+{
+"objectives": [
+	{
+		"class": "Objective_CampaignDefeat",
+		"onFail": [
+			{ "class": "StepC_Defeat" }
+		]
+	},
+	{ "class": "Objective_CampaignUpkeep" },
+	{
+		"class": "Objective_ClearAllHostileSites",
+		"objectiveId": "Objective_ClearAllHostileSites.UrchinsAndTheUnderwood_1",
+		"onSuccess": [],
+		"oneFlavorOnly": "drauven"
+	},
+	{
+		"class": "Objective_LocateAndUnlockSite",
+		"objectiveId": "capstone.findSite.UrchinsAndTheUnderwood_1",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_locked",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"onSuccess": [
+			{
+				"class": "Step_AddObjectives",
+				"objectives": [ "Objective_AssaultJob.UrchinsAndTheUnderwood_1" ]
+			}
+		],
+		"target": "site3",
+		"lockUntilObjectiveComplete": "Objective_ClearAllHostileSites.UrchinsAndTheUnderwood_1",
+		"unlockedFeedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_battle",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		]
+	},
+	{
+		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.UrchinsAndTheUnderwood_1",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_battle",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"site": "site3",
+		"arriveEvent": [ "plot_UrchinsAndTheUnderwood_1_2_capstone_arrive" ],
+		"isCapstoneFight": true,
+		"results": [
+			{
+				"customResults": [
+					{ "class": "Step_SetPlotResult" }
+				]
+			},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		]
+	}
+],
+"steps": [
+	{ "class": "StepC_BeginChapter", "chapter": "introduction" },
+	{
+		"class": "Step_Encounter",
+		"arriveEvent": [ "plot_UrchinsAndTheUnderwood_0_1_intro_arrive" ],
+		"exactSite": "town",
+		"injectRoles": [ "party", "warrior", "hunter", "mystic" ],
+		"createFoes": { "threatStrength": "2" },
+		"results": [
+			{},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		]
+	},
+	{ "class": "StepC_BeginChapter", "chapter": "one" },
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [
+			"Objective_CampaignDefeat",
+			"campaignUpkeep",
+			"Objective_ClearAllHostileSites.UrchinsAndTheUnderwood_1",
+			"capstone.findSite.UrchinsAndTheUnderwood_1"
+		]
+	}
+]
+}

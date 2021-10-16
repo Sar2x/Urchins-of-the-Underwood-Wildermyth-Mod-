@@ -1,0 +1,23 @@
+{
+"scenarioInfo": {
+	"id": "UrchinsAndTheUnderwood",
+	"type": "CAMPAIGN",
+	"nameKey": "UrchinsAndTheUnderwood.name",
+	"blurbKey": "UrchinsAndTheUnderwood.blurb",
+	"rosterSlots": [
+		{
+			"archetype": "warrior",
+			"plotRoles": [ "party", "warrior" ]
+		},
+		{
+			"archetype": "hunter",
+			"plotRoles": [ "party", "hunter" ]
+		},
+		{
+			"archetype": "mystic",
+			"plotRoles": [ "party", "mystic" ]
+		}
+	]
+},
+"villainPlotId": "C_UrchinsAndTheUnderwood"
+}

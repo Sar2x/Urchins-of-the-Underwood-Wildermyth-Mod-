@@ -1,0 +1,30 @@
+{
+"scenarioInfo": {
+	"id": "UrchinsAndTheUnderwood_0_1_intro",
+	"type": "MISSION",
+	"nameKey": "UrchinsAndTheUnderwood_0_1_intro.name",
+	"blurbKey": "UrchinsAndTheUnderwood_0_1_intro.blurb",
+	"rosterSlots": [
+		{ "type": "greenhorn", "archetype": "warrior" },
+		{ "type": "greenhorn", "archetype": "warrior" },
+		{ "type": "greenhorn", "archetype": "hunter" },
+		{ "type": "greenhorn", "archetype": "mystic" }
+	]
+},
+"playableFactions": [
+	{ "factionRole": "HERO", "plotRole": "attacker" },
+	{ "factionRole": "VILLAIN", "plotRole": "defender" }
+],
+"site": {
+	"type": "SITE",
+	"siteTemplateId": "virtualWilderness",
+	"siteMissionPlanId": "UrchinsAndTheUnderwood_0_1_intro"
+},
+"inhabitants": [
+	{
+		"factionRole": "VILLAIN",
+		"threat": { "flavor": "drauven", "strength": 6 },
+		"calamities": 6
+	}
+]
+}
