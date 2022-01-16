@@ -1,0 +1,30 @@
+{
+"scenarioInfo": {
+	"id": "Urchins-of-the-Underwood-Wildermyth-Mod-_5461",
+	"type": "MISSION",
+	"nameKey": "Urchins-of-the-Underwood-Wildermyth-Mod-_5461.name",
+	"blurbKey": "Urchins-of-the-Underwood-Wildermyth-Mod-_5461.blurb",
+	"rosterSlots": [
+		{ "type": "greenhorn", "archetype": "warrior" },
+		{ "type": "greenhorn", "archetype": "warrior" },
+		{ "type": "greenhorn", "archetype": "hunter" },
+		{ "type": "greenhorn", "archetype": "hunter" },
+		{ "type": "greenhorn", "archetype": "mystic" }
+	]
+},
+"playableFactions": [
+	{ "factionRole": "HERO", "plotRole": "attacker" },
+	{ "factionRole": "VILLAIN", "plotRole": "defender" }
+],
+"site": {
+	"type": "SITE",
+	"siteMissionPlanId": "Urchins-of-the-Underwood-Wildermyth-Mod-_5461"
+},
+"inhabitants": [
+	{
+		"factionRole": "VILLAIN",
+		"threat": { "flavor": "drauven", "strength": 6 },
+		"calamities": 6
+	}
+]
+}
